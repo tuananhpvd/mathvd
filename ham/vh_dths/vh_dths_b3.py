@@ -29,11 +29,8 @@ class vh_dths_b3(QDialog):
         self.luu = QPushButton('Lưu ảnh')
         self.thoat = QPushButton('Thoát')
 
-        x = np.linspace(-np.pi, np.pi, 100)
-        y = 2 * np.sin(x)
-
         # random data
-        data = [random.random() for i in range(10)]
+        # data = [random.random() for i in range(10)]
 
         # clearing old figure
         self.figure.clear()
@@ -42,7 +39,17 @@ class vh_dths_b3(QDialog):
         ax = self.figure.add_subplot(111)
 
         # plot data
-        ax.plot(data, '*-')
+        # ax.plot(data, '*-')
+        # x = symbols('x')
+        x = np.linspace(-5, 5, 100)
+        # y = x ** 2
+        hs1 = self.lne_nhap.text()  # ham so kieu latex khi nhap
+        # hs2 = parse_latex(hs1)  # ham so kieu sympy
+        # bt = poly(hs2, x)  # chuyen hs ve dang da thuc
+        # heso = bt.all_coeffs()  # lay cac he so cua bt
+        # x = np.linspace(-np.pi, np.pi, 100)
+        # y = 2 * np.sin(x)
+        # plt.plot(hs2)
 
         # refresh canvas
         self.canvas.draw()
