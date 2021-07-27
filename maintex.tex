@@ -1,0 +1,108 @@
+\documentclass[12pt,a4paper,oneside]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{mathrsfs}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{multirow,makecell}
+\usepackage{tkz-euclide}
+%\usetkzobj{all}
+\usepackage{tikz-3dplot}
+%\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\usepackage[tikz]{bclogo}
+\usepackage{tikz,tkz-tab,tkz-linknodes}
+\usepackage{tabvar}
+\usepackage{venndiagram}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{patterns}
+\pgfplotsset{compat=1.9}
+
+\usetikzlibrary{arrows,calc,intersections,angles,snakes,quotes}
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm] {geometry}
+%\usepackage[unicode, bookmarks=false]{hyperref}
+\usepackage[hidelinks,unicode]{hyperref}
+
+\usepackage{currfile}
+
+
+\usepackage[dethi]{ex_test}
+%\usepackage[solcolor]{ex_test}
+%\usepackage[color]{ex_test}
+\def\colorEX{\color{blue}}
+\renewcommand{\dapan}{\stepcounter{dapan}{\textbf{\color{blue}\Alph{dapan}.}}}
+%\renewtheorem{ex}{\color{violet}Câu}
+\newtheorem{bt}{Bài}
+\usepackage{esvect}
+\def\vec{\vv}
+\def\overrightarrow{\vv}
+
+%Lệnh của gói mathrsfs
+%\DeclareSymbolFont{rsfs}{U}{rsfs}{m}{n}
+%\DeclareSymbolFontAlphabet{\mathscr}{rsfs}
+%Lệnh cung
+%\DeclareSymbolFont{largesymbols}{OMX}{yhex}{m}{n}
+%\DeclareMathAccent{\wideparen}{\mathord}{largesymbols}{"F3}
+%Lệnh song song
+%\DeclareSymbolFont{symbolsC}{U}{txsyc}{m}{n}
+%\DeclareMathSymbol{\varparallel}{\mathrel}{symbolsC}{9}
+%\DeclareMathSymbol{\parallel}{\mathrel}{symbolsC}{9}
+%Hệ hoặc, hệ và
+\newcommand{\hoac}[1]{
+	\left[\begin{aligned}#1\end{aligned}\right.}
+\newcommand{\heva}[1]{
+	\left\{\begin{aligned}#1\end{aligned}\right.}
+\renewcommand{\baselinestretch}{1.4}
+
+\makeatletter
+\renewcommand{\labelenumi}{\alph{enumi})}
+\makeatother
+\newcounter{demsode}[chapter]
+
+\newenvironment{name}[2]{
+	\noindent\addtocounter{demsode}{1}
+	\setcounter{ex}{0}
+	\tikz \draw[double,blue] (0,0)--(\textwidth,0);
+	\begin{minipage}{0.44\textwidth}
+	\centering
+	{\large\color{red}\bfseries\fontfamily{anttlc}\selectfont LUYỆN THI THPT QUỐC GIA 2021}\\	
+	{\Large\color{red}	\bfseries\fontfamily{anttlc}\selectfont ĐỀ SỐ \circEX{\thedemsode}}\\			
+	\color{blue}	{\bfseries\fontfamily{anttlc}\selectfont #1}\\
+	\rule{3cm}{1pt}
+\end{minipage}
+\begin{minipage}{0.54\textwidth}
+	\color{blue}	\centering
+	%{\Large	\bfseries\fontfamily{anttlc}\selectfont\MakeUppercase{#2}}\\
+	{\bfseries\fontfamily{qag}\selectfont \MakeUppercase{#2} }\\
+	\textit{Đề thi có 50 câu trắc nghiệm}\\
+	\textit{Thời gian: 90 phút (không kể phát đề)}\\
+	\addcontentsline{toc}{section}{Đề số \thedemsode.\, #2}
+\end{minipage}
+\\[0.5cm]\color{blue}\hspace*{1cm}	\textit{Họ và tên thí sinh:} \tikz \draw[dotted,thick] (0,0)--(\textwidth/3,0); 
+\textit{Số báo danh:} \EXboxTF{}\EXboxTF{}\EXboxTF{}\EXboxTF{}\EXboxTF{}\EXboxTF{}\EXboxTF{}\EXboxTF{}\\
+\tikz \draw[double,blue] (0,0)--(\textwidth,0);	
+}
+
+
+\pagestyle{fancy}
+
+\chead{\empty}
+\rhead{\currfilename}
+\lfoot{\empty}
+
+\begin{document}
+
+%\hideenviron{indapan}
+
+\foreach \tende in {
+	cauhoi
+%	deso2
+}
+{
+	\input{data/\tende}
+	\newpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%555
+\end{document}

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Math Tools</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_hethong">
+    <property name="title">
+     <string>Hệ thống</string>
+    </property>
+    <addaction name="action_gioithieu"/>
+    <addaction name="action_banquyen"/>
+    <addaction name="action_thoat"/>
+   </widget>
+   <widget class="QMenu" name="menu_bt">
+    <property name="title">
+     <string>Bài tập</string>
+    </property>
+    <widget class="QMenu" name="menu_bt_hhgt">
+     <property name="title">
+      <string>Hình học giải tích</string>
+     </property>
+     <widget class="QMenu" name="menu_bt_hhgt3">
+      <property name="title">
+       <string>Oxyz</string>
+      </property>
+      <addaction name="action_bt_hhgt3_ptmp"/>
+      <addaction name="action_bt_hhgt3_ptdt"/>
+      <addaction name="action_bt_hhgt3_ptmc"/>
+     </widget>
+     <addaction name="action_bt_hhgt2"/>
+     <addaction name="menu_bt_hhgt3"/>
+    </widget>
+    <addaction name="action_bt_ds"/>
+    <addaction name="action_bt_gt"/>
+    <addaction name="action_bt_hh"/>
+    <addaction name="menu_bt_hhgt"/>
+   </widget>
+   <widget class="QMenu" name="menu_gt">
+    <property name="title">
+     <string>Giải toán</string>
+    </property>
+    <widget class="QMenu" name="menu_gt_gt">
+     <property name="title">
+      <string>Giải tích</string>
+     </property>
+     <addaction name="action_gt_gt_dondieu"/>
+     <addaction name="action_gt_gt_cuctri"/>
+     <addaction name="action_gt_gt_tiemcan"/>
+    </widget>
+    <widget class="QMenu" name="menu_gt_hhgt">
+     <property name="title">
+      <string>Hình học giải tích</string>
+     </property>
+     <addaction name="action_gt_hhgt2"/>
+     <addaction name="action_gt_hhgt3"/>
+    </widget>
+    <widget class="QMenu" name="menu_gt_ds">
+     <property name="title">
+      <string>Đại số</string>
+     </property>
+     <widget class="QMenu" name="menu_gt_ds_pt">
+      <property name="title">
+       <string>Phương trình</string>
+      </property>
+      <addaction name="action_gt_ds_pt_ptb2"/>
+      <addaction name="action_gt_ds_pt_ptb3"/>
+      <addaction name="action_gt_ds_pttphuong"/>
+      <addaction name="action_gt_ds_pt_ptvoti"/>
+      <addaction name="action_gt_ds_pt_tuyetdoi"/>
+     </widget>
+     <addaction name="menu_gt_ds_pt"/>
+     <addaction name="action_gt_ds_bpt"/>
+    </widget>
+    <addaction name="menu_gt_ds"/>
+    <addaction name="menu_gt_gt"/>
+    <addaction name="action_gt_hh"/>
+    <addaction name="menu_gt_hhgt"/>
+   </widget>
+   <widget class="QMenu" name="menu_vh">
+    <property name="title">
+     <string>Vẽ hình</string>
+    </property>
+    <widget class="QMenu" name="menu_vh_hh">
+     <property name="title">
+      <string>Hình học</string>
+     </property>
+     <addaction name="action_vh_hh2"/>
+     <addaction name="action_vh_hh3"/>
+    </widget>
+    <widget class="QMenu" name="menu_vh_bbt">
+     <property name="title">
+      <string>Bảng biến thiên</string>
+     </property>
+     <addaction name="action_vh_bbt_b1"/>
+     <addaction name="action_vh_bbt_b2"/>
+     <addaction name="action_vh_bbt_b3"/>
+     <addaction name="action_vh_bbt_trungphuong"/>
+     <addaction name="action_vh_bbt_b11"/>
+     <addaction name="action_vh_bbt_b21"/>
+     <addaction name="action_vh_bbt_lg"/>
+     <addaction name="action_vh_bbt_tuyetdoi"/>
+    </widget>
+    <widget class="QMenu" name="menu_vh_dths">
+     <property name="title">
+      <string>Đồ thị hàm số</string>
+     </property>
+     <addaction name="action_vh_dths_b1"/>
+     <addaction name="action_vh_dths_b2"/>
+     <addaction name="action_vh_dths_b3"/>
+     <addaction name="action_vh_dths_trungphuong"/>
+     <addaction name="action_vh_dths_b11"/>
+     <addaction name="action_vh_dths_b21"/>
+     <addaction name="action_vh_dths_lg"/>
+     <addaction name="action_vh_dths_tuyetdoi"/>
+    </widget>
+    <addaction name="menu_vh_hh"/>
+    <addaction name="menu_vh_dths"/>
+    <addaction name="menu_vh_bbt"/>
+   </widget>
+   <widget class="QMenu" name="menu_thoat">
+    <property name="title">
+     <string>Thoát</string>
+    </property>
+   </widget>
+   <addaction name="menu_hethong"/>
+   <addaction name="menu_bt"/>
+   <addaction name="menu_gt"/>
+   <addaction name="menu_vh"/>
+   <addaction name="menu_thoat"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_gioithieu">
+   <property name="text">
+    <string>Giới thiệu</string>
+   </property>
+  </action>
+  <action name="action_banquyen">
+   <property name="text">
+    <string>Bản quyền</string>
+   </property>
+  </action>
+  <action name="action_thoat">
+   <property name="text">
+    <string>Thoát</string>
+   </property>
+  </action>
+  <action name="action_bt_ds">
+   <property name="text">
+    <string>Đại số</string>
+   </property>
+  </action>
+  <action name="action_bt_gt">
+   <property name="text">
+    <string>Giải tích</string>
+   </property>
+  </action>
+  <action name="action_bt_hh">
+   <property name="text">
+    <string>Hình học</string>
+   </property>
+  </action>
+  <action name="action_gt_hh">
+   <property name="text">
+    <string>Hình học</string>
+   </property>
+  </action>
+  <action name="action_vh_hh2">
+   <property name="text">
+    <string>Hình học phẳng</string>
+   </property>
+  </action>
+  <action name="action_vh_hh3">
+   <property name="text">
+    <string>Hình học không gian</string>
+   </property>
+  </action>
+  <action name="action_gt_gt_dondieu">
+   <property name="text">
+    <string>Tính đơn điệu</string>
+   </property>
+  </action>
+  <action name="action_gt_gt_cuctri">
+   <property name="text">
+    <string>Cực trị</string>
+   </property>
+  </action>
+  <action name="action_gt_gt_tiemcan">
+   <property name="text">
+    <string>Đường tiệm cận</string>
+   </property>
+  </action>
+  <action name="action_gt_hhgt3_ptmp">
+   <property name="text">
+    <string>Phương trình mặt phẳng</string>
+   </property>
+  </action>
+  <action name="action_gt_hhgt3_ptdt">
+   <property name="text">
+    <string>Phương trình đường thẳng</string>
+   </property>
+  </action>
+  <action name="action_gt_hhgt3_ptmc">
+   <property name="text">
+    <string>Phương trình mặt cầu</string>
+   </property>
+  </action>
+  <action name="action_bt_hhgt2">
+   <property name="text">
+    <string>Oxy</string>
+   </property>
+  </action>
+  <action name="actionPh_ng_tr_nh_m_t_c_u_2">
+   <property name="text">
+    <string>Phương trình mặt cầu</string>
+   </property>
+  </action>
+  <action name="action_bt_hhgt3_ptmp">
+   <property name="text">
+    <string>Phương trình mặt phẳng</string>
+   </property>
+  </action>
+  <action name="action_bt_hhgt3_ptdt">
+   <property name="text">
+    <string>Phương trình đường thẳng</string>
+   </property>
+  </action>
+  <action name="action_bt_hhgt3_ptmc">
+   <property name="text">
+    <string>Phương trình mặt cầu</string>
+   </property>
+  </action>
+  <action name="action_gt_hhgt2">
+   <property name="text">
+    <string>Oxy</string>
+   </property>
+  </action>
+  <action name="action_gt_hhgt3">
+   <property name="text">
+    <string>Oxyz</string>
+   </property>
+  </action>
+  <action name="action_gt_ds_bpt">
+   <property name="text">
+    <string>Bất phương trình</string>
+   </property>
+  </action>
+  <action name="action_gt_ds_pt_ptb2">
+   <property name="text">
+    <string>PT bậc 2</string>
+   </property>
+  </action>
+  <action name="action_gt_ds_pt_ptb3">
+   <property name="text">
+    <string>PT bậc 3</string>
+   </property>
+  </action>
+  <action name="action_gt_ds_pttphuong">
+   <property name="text">
+    <string>PT trùng phương</string>
+   </property>
+  </action>
+  <action name="action_gt_ds_pt_ptvoti">
+   <property name="text">
+    <string>PT vô tỉ</string>
+   </property>
+  </action>
+  <action name="action_gt_ds_pt_tuyetdoi">
+   <property name="text">
+    <string>PT chứa trị tuyệt đối</string>
+   </property>
+  </action>
+  <action name="action_vh_bbt_b1">
+   <property name="text">
+    <string>Hàm số bậc nhất</string>
+   </property>
+  </action>
+  <action name="action_vh_bbt_b2">
+   <property name="text">
+    <string>Hàm số bậc 2</string>
+   </property>
+  </action>
+  <action name="action_vh_bbt_b3">
+   <property name="text">
+    <string>Hàm số bậc 3</string>
+   </property>
+  </action>
+  <action name="action_vh_bbt_trungphuong">
+   <property name="text">
+    <string>Hàm số trùng phương</string>
+   </property>
+  </action>
+  <action name="action_vh_bbt_b11">
+   <property name="text">
+    <string>Hàm số bậc 1/1</string>
+   </property>
+  </action>
+  <action name="action_vh_bbt_b21">
+   <property name="text">
+    <string>Hàm số bậc 2/1</string>
+   </property>
+  </action>
+  <action name="action_vh_bbt_lg">
+   <property name="text">
+    <string>Hàm số lượng giác</string>
+   </property>
+  </action>
+  <action name="action_vh_dths_b1">
+   <property name="text">
+    <string>Hàm số bậc nhất</string>
+   </property>
+  </action>
+  <action name="action_vh_dths_b2">
+   <property name="text">
+    <string>Hàm số bậc 2</string>
+   </property>
+  </action>
+  <action name="action_vh_dths_b3">
+   <property name="text">
+    <string>Hàm số bậc 3</string>
+   </property>
+  </action>
+  <action name="action_vh_dths_trungphuong">
+   <property name="text">
+    <string>Hàm số trùng phương</string>
+   </property>
+  </action>
+  <action name="action_vh_dths_b11">
+   <property name="text">
+    <string>Hàm số bậc 1/1</string>
+   </property>
+  </action>
+  <action name="action_vh_dths_b21">
+   <property name="text">
+    <string>Hàm số bậc 2/1</string>
+   </property>
+  </action>
+  <action name="action_vh_dths_lg">
+   <property name="text">
+    <string>Hàm số lượng giác</string>
+   </property>
+  </action>
+  <action name="action_vh_dths_tuyetdoi">
+   <property name="text">
+    <string>Hàm số chứa trị tuyệt đối</string>
+   </property>
+  </action>
+  <action name="action_vh_bbt_tuyetdoi">
+   <property name="text">
+    <string>Hàm số chứa trị tuyệt đối</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

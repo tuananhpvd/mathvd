@@ -1,0 +1,219 @@
+% các bạn có thể edit dòng chứa $\atop{\displaystyle f'(x)}$ và dòng chứa $\atop{\displaystyle f(x)}$ tên hàm phù hợp.
+
+\newcommand{\hsbha}[2]
+{
+\begin{mplibcode}
+	input tableauVariation
+	beginTableau(0) newLigneVariables(btex $x$ etex);val(btex $-\infty $ etex);
+	val(btex $#1$ etex);
+	val(btex $+\infty $ etex); 
+	newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);plus; val(btex 0 etex);moins;
+	newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $-\infty$ etex,0); valPos(btex   $#2$
+	etex,1);valPos(btex $-\infty$ etex,0);
+	endTableau;
+\end{mplibcode}
+}
+
+\newcommand{\hsbhd}[2]
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(1) newLigneVariables(btex $x$ etex);val(btex $-\infty $ etex);
+val(btex $#1$ etex);
+val(btex $+\infty $ etex);
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);moins; val(btex 0 etex);plus;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $+\infty $ etex,1); valPos(btex $#2$
+etex,0);
+valPos(btex $+\infty $ etex,1);
+endTableau;
+\end{mplibcode}
+}
+
+\newcommand{\hsbba}[4]
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(2) newLigneVariables(btex $x$ etex);val(btex $-\infty $ etex);
+val(btex $#1$ etex);
+val(btex $#2$ etex);
+val(btex $+\infty $ etex);
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);moins; val(btex 0 etex);plus;val(btex 0 etex);moins;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $+\infty $ etex,1); valPos(btex   $#3$
+etex,0);
+valPos(btex   $#4$ etex,1);valPos(btex $-\infty$ etex,0);
+endTableau;
+\end{mplibcode}
+}
+
+\newcommand{\hsbbd}[4]
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(3) newLigneVariables(btex $x$ etex);val(btex $-\infty $ etex);
+val(btex $#1$ etex);
+val(btex $#2$ etex);
+val(btex $+\infty $ etex); 
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);plus; val(btex 0 etex);moins;val(btex 0 etex);plus;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $-\infty$ etex,0); valPos(btex   $#3$
+etex,1);valPos(btex   $#4$ etex,0);
+valPos(btex $+\infty $ etex,1);
+endTableau;
+\end{mplibcode}
+}
+
+
+\newcommand{\hsbbngt}
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(4) newLigneVariables(btex $x$ etex);val(btex $-\infty $ etex);
+val(btex $+\infty $ etex);
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);plus;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $-\infty$ etex,0);valPos(btex $+\infty $ etex,1);
+endTableau;
+\end{mplibcode}
+}
+
+
+\newcommand{\hsbbngg}
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(5) newLigneVariables(btex $x$ etex);val(btex $-\infty $ etex);
+val(btex $+\infty $ etex);
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);moins;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $+\infty$ etex,1);valPos(btex $-\infty $ etex,0);
+endTableau;
+\end{mplibcode}
+}
+
+
+\newcommand{\hsbbdt}[2]
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(6) newLigneVariables(btex $x$ etex);val(btex $-\infty $ etex);
+val(btex $#1$ etex); val(btex $+\infty $ etex);
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);plus;
+val(btex 0 etex);plus;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $-\infty$ etex,0);
+valPos(btex   $#2$
+etex,0.5);
+valPos(btex $+\infty $ etex,1);
+endTableau;
+\end{mplibcode}
+}
+
+
+\newcommand{\hsbbdg}[2]
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(7) newLigneVariables(btex $x$ etex);val(btex $-\infty $ etex);
+val(btex $#1$ etex); val(btex $+\infty $ etex);
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);moins;
+val(btex 0 etex);plus;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $+\infty$ etex,1);
+valPos(btex   $#2$
+etex,0.5);
+valPos(btex $-\infty $ etex,0);
+endTableau;
+\end{mplibcode}
+}
+
+\newcommand{\hsbpa}[4]
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(8) newLigneVariables(btex $x$ etex);val(btex $-\infty $ etex);
+val(btex $#1$ etex);
+val(btex $0$ etex);
+val(btex $#2$ etex);
+val(btex $+\infty $ etex);
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);plus; val(btex 0 etex);moins;val(btex 0 etex);plus;val(btex 0 etex);moins;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $-\infty$ etex,0); valPos(btex $#3$
+etex,1);valPos(btex $#4$  etex,0);
+valPos(btex $#3$  etex,1);valPos(btex $-\infty$ etex,0);
+endTableau;
+\end{mplibcode}
+}
+
+
+
+\newcommand{\hsbpd}[4]
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(9) newLigneVariables(btex $x$ etex);val(btex $-\infty $ etex);
+val(btex $#1$ etex);
+val(btex $0$ etex);
+val(btex $#2$ etex);
+val(btex $+\infty $ etex);
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);moins; val(btex 0 etex);plus;val(btex 0 etex);moins;val(btex 0 etex);plus;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $+\infty$ etex,1); valPos(btex $#3$etex,0);valPos(btex $#4$  etex,1);
+valPos(btex $#3$  etex,0);valPos(btex $+\infty$ etex,1);
+endTableau;
+\end{mplibcode}
+}
+
+
+\newcommand{\hsbpma}[1]
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(10) newLigneVariables(btex $x$ etex);
+val(btex $-\infty $ etex);
+val(btex $0$ etex);
+val(btex $+\infty $ etex);
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);plus; val(btex 0 etex);moins;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $-\infty$ etex,0); valPos(btex $#1$  etex,1);valPos(btex $-\infty$ etex,0);
+endTableau;
+\end{mplibcode}
+}
+
+
+\newcommand{\hsbpmd}[1]
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(11) newLigneVariables(btex $x$ etex);
+val(btex $-\infty $ etex);
+val(btex $0$ etex);
+val(btex $+\infty $ etex);
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);moins; val(btex 0 etex);plus;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $+\infty$ etex,1); valPos(btex $#1$  etex,0);valPos(btex $+\infty$ etex,1);
+endTableau;
+\end{mplibcode}
+}
+
+
+\newcommand{\hsnba}[2]
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(12) newLigneVariables(btex $x$ etex);
+val(btex $-\infty $ etex);
+val(btex $#1$ etex);
+val(btex $+\infty $ etex); 
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);moins; nonDefBarre;moins;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $#2$ etex,1); limGauche(btex  $-\infty$                          etex,0);nonDefBarre;limDroite(btex $+\infty $ etex,1);valPos(btex $2$ etex,0);
+endTableau;
+\end{mplibcode}
+}
+
+
+\newcommand{\hsnbd}[2]
+{
+\begin{mplibcode}
+input tableauVariation
+beginTableau(13) newLigneVariables(btex $x$ etex);
+val(btex $-\infty $ etex);
+val(btex $#1$ etex);
+val(btex $+\infty $ etex); 
+newLigneSignes(btex $\atop{\displaystyle f'(x)}$ etex);plus; nonDefBarre;plus;
+newLigneVariations(btex $\atop{\displaystyle f(x)}$ etex);valPos(btex $#2$ etex,0); limGauche(btex  $+\infty$ etex,1);nonDefBarre;limDroite(btex $-\infty $ etex,0);valPos(btex $#2$ etex,1);
+endTableau;
+\end{mplibcode}
+}
+
+

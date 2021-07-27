@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Đồ thị hàm số</string>
+  </property>
+  <widget class="QWebEngineView" name="webhd" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>271</width>
+     <height>491</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_huongdan">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Hướng dẫn:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_nhap">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>6</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nhập hàm số:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lne_nhap">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>30</y>
+     <width>391</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_xemtruoc">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>67</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Xem trước:</string>
+   </property>
+  </widget>
+  <widget class="QWebEngineView" name="webxem" native="true">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>90</y>
+     <width>391</width>
+     <height>61</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_vedt">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>270</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Vẽ đồ thị</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_thoat">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>270</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Thoát</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_kt">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>62</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kiểm tra</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_xoa">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>62</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nhập lại</string>
+   </property>
+  </widget>
+  <widget class="QWebEngineView" name="webdang" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_dang">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>8</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dạng hàm số:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_tuychon">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>153</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Tùy chọn:</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
+   <header>PyQt5.QtWebEngineWidgets</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_thoat</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>678</x>
+     <y>167</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>695</x>
+     <y>-32</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_xoa</sender>
+   <signal>clicked()</signal>
+   <receiver>lne_nhap</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>688</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>683</x>
+     <y>38</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

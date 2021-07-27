@@ -1,0 +1,6 @@
+1. Lenh convert ui sang py
+pyuic5 -o main_win.py main_win.ui
+2.Lệnh pdflatex cũ:
+pdflatex.exe -synctex=1 -interaction=nonstopmode %.tex
+Lệnh pdflatex mới: tablor vẽ bảng biến thiên
+pdflatex -synctex=1 --shell-escape -interaction=nonstopmode %.tex

@@ -1,0 +1,17 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{fourier} 
+\usepackage[utf8]{vietnam} 
+\usepackage{times} 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyvrb}
+\usepackage{graphicx} 
+\begin{document}
+\parindent=0pt
+
+\immediate\write18{lualatex bbt_hs.tex}
+
+\includegraphics{bbt_hs.pdf}
+
+\end{document}	

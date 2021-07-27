@@ -1,0 +1,32 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{fourier} 
+\usepackage[utf8]{vietnam} 
+\usepackage{times} 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyvrb}
+\usepackage{graphicx} 
+\begin{document}
+\parindent=0pt
+
+\begin{center}
+{\Large \textbf{Hàm số bậc ba} $\mathbf{y=ax^3+bx^2+cx+d}$}
+\end{center}
+
+
+\section{Hệ số $\mathbf{a}$ am}
+
+Ví dụ:  $y=-x^3+3x^2-3$
+
+\begin{verbatim}
+\hsbba{0}{2}{3}{-1}
+\end{verbatim}
+
+\immediate\write18{lualatex bbt_vd.tex}
+
+Bảng biến thiên hàm số $y=-x^3+3x^2-3$\bigskip 
+
+\includegraphics{bbt_vd.pdf}
+
+\end{document}	
